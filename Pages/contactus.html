@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="cstyle.css">
+</head>
+
+<body>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul class="sidebar-links">
+        <li><a href="#" onclick="navigateToHome()">Home</a></li>
+        <li><a href="#" onclick="navigateToService()">Services</a></li>
+        <li><a href="#" onclick="navigateToBlogs()">Blogs</a></li>
+        <li><a href="#" onclick="navigateToAbout()">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="header">
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle" aria-label="input" />
+      <label for="menu-toggle" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </label>
+      <h2 class="logo"><a href="#">Your Logo</a></h2>
+      <ul class="links">
+        <li><a href="#" onclick="navigateToHome()">Home</a></li>
+        <li><a href="#" onclick="navigateToService()">Services</a></li>
+        <li><a href="#" onclick="navigateToBlogs()">Blogs</a></li>
+        <li><a href="#" onclick="navigateToAbout()">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="#" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    function navigateToHome() {
+        window.location.href = '../index.html';
+    }
+
+    function navigateToAbout() {
+        window.location.href = '../About/about.html';
+    }
+   
+
+    function navigateToBlogs() {
+        window.location.href = '../Blogs/blogs.html';
+    }
+
+    function navigateToService() {
+        window.location.href = '../Service/sindex.html';
+    }
+</script>
+  <script src="cindex.js"></script>
+</body>
+
+</html>

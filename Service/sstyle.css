@@ -1,0 +1,195 @@
+/* Importing Google font - Open Sans */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Body Styles */
+body {
+  width: 100%;
+  color: #333D79FF;
+  background: #FAEBEFFF;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page height covers the viewport */
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333D79FF;
+  z-index: 1000;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-content {
+  padding: 20px;
+}
+
+.close-btn {
+  color: #fff;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-links li {
+  margin-bottom: 10px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: #FAEBEFFF;
+  font-size: 1.2rem;
+  transition: color 0.2s ease;
+}
+
+.sidebar-links a:hover {
+  color: #47b2e4;
+}
+
+
+/* Hamburger menu styles */
+#menu-toggle {
+    display: none;
+  }
+  
+  #hamburger-btn {
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    order: 1;
+  }
+/* Header Section */
+.header {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333D79FF;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 15px;
+  box-sizing: border-box;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #FAEBEFFF;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #FAEBEFFF;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+  color: #FAEBEFFF;
+}
+
+/* Services Section Styles */
+.services-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.services-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333D79FF;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: left;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333D79FF;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer Section Styles */
+.footer {
+  background-color: #333D79FF;
+  color: #FAEBEFFF;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+}
