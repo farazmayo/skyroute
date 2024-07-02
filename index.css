@@ -1757,14 +1757,12 @@ section.gallery-container {
 
 /* Apply animation to the back-to-top button */
 #footer-home {
+   display: none; /* Initially hidden */
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #333D79FF;
-  color: #FAEBEFFF;
   padding: 10px 20px;
   border: none;
-  border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 5s ease;
@@ -1772,7 +1770,7 @@ section.gallery-container {
 }
 
 #footer-home:hover {
-  background-color: #47b2e4;
+  color: #47b2e4;
   animation-play-state: paused;
   /* Pause animation on hover */
 }

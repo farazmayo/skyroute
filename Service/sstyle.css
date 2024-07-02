@@ -1,3 +1,5 @@
+/* sstyle.css */
+
 /* Importing Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
 
@@ -12,8 +14,8 @@
 /* Body Styles */
 body {
   width: 100%;
-  color: #333D79FF;
-  background: #FAEBEFFF;
+  color: #ffffff; /* Changed text color to white */
+  background: #333D79FF;
   overflow-x: hidden; /* Prevent horizontal overflow */
   display: flex;
   flex-direction: column;
@@ -26,12 +28,15 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 250px;
+  width: 80%; /* Changed sidebar width to 80% */
   background-color: #333D79FF;
   z-index: 1000;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: flex-start; /* Align items to the start */
 }
 
 .sidebar.active {
@@ -40,6 +45,10 @@ body {
 
 .sidebar-content {
   padding: 20px;
+  flex-grow: 1; /* Allow content to grow to fill remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between top and bottom content */
 }
 
 .close-btn {
@@ -57,6 +66,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 20px; /* Margin to separate from main links */
 }
 
 .sidebar-links li {
@@ -65,7 +75,7 @@ body {
 
 .sidebar-links a {
   text-decoration: none;
-  color: #FAEBEFFF;
+  color: #ffffff; /* Changed sidebar link color to white */
   font-size: 1.2rem;
   transition: color 0.2s ease;
 }
@@ -74,19 +84,19 @@ body {
   color: #47b2e4;
 }
 
-
 /* Hamburger menu styles */
 #menu-toggle {
-    display: none;
-  }
-  
-  #hamburger-btn {
-    font-size: 1.8rem;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    order: 1;
-  }
+  display: none;
+}
+
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  order: 3; /* Ensures hamburger button stays on the right */
+}
+
 /* Header Section */
 .header {
   width: 100%;
@@ -132,6 +142,7 @@ body {
 .services-section {
   padding: 60px 0;
   background-color: #f9f9f9;
+  flex: 1; /* Make the section grow and push the footer to the bottom */
 }
 
 .services-section .container {
@@ -178,7 +189,6 @@ body {
   color: #FAEBEFFF;
   padding: 20px 0;
   text-align: center;
-  margin-top: auto; /* Push footer to the bottom */
 }
 
 .footer .container {
@@ -192,4 +202,74 @@ body {
 
 .footer-bottom p {
   font-size: 0.9rem;
+}
+
+/* Back to Top Button Styles */
+#footer-home {
+  display: none; /* Initially hidden */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333D79FF;
+  color: #FAEBEFFF;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease;
+  z-index: 1000;
+}
+
+#footer-home i {
+  font-size: 1.2rem;
+}
+
+/* Show the button when scrolled down */
+#footer-home.show {
+  display: block;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .navbar .links {
+    display: none;
+  }
+
+  .navbar .logo {
+    order: 2;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .sidebar {
+    width: 80%; /* Ensure the sidebar stays at 80% on smaller screens */
+  }
+
+  #hamburger-btn {
+    display: block;
+    order: 3; /* Keep hamburger on the right side */
+  }
+
+  .services-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  #hamburger-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+  }
 }

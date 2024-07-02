@@ -259,12 +259,22 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       const backToTopButton = document.getElementById('footer-home');
-    
+      
       // Scroll to top function
-      backToTopButton.addEventListener('click', () => {
+      backToTopButton.addEventListener('click', (e) => {
+          e.preventDefault();
           window.scrollTo({
               top: 0,
               behavior: 'smooth'
           });
+      });
+
+      // Toggle button visibility on scroll
+      window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) {
+              backToTopButton.style.display = 'block';
+          } else {
+              backToTopButton.style.display = 'none';
+          }
       });
   });
