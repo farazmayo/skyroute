@@ -2,121 +2,632 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sky Routes - Blogs</title>
-    <link rel="stylesheet" href="bstyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sky Routes - Blogs</title>
+  <link rel="stylesheet" href="bstyle.css">
 </head>
 
 <body>
-    <div class="sidebar" id="sidebar">
-        <div class="sidebar-content">
-            <button class="close-btn" id="close-btn">&times;</button>
-            <ul class="sidebar-links">
-                <li><a href="#" onclick="navigateToHome()">Home</a></li>
-                <li><a href="#" onclick="navigateToAbout()">About Us</a></li>
-                <li><a href="#" onclick="navigateToService()">Services</a></li>
-                <li><a href="#" onclick="navigateToContact()">Contact Us</a></li>
-            </ul>
-        </div>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul class="sidebar-links">
+        <li><a href="#" onclick="navigateToHome()">Home</a></li>
+        <li><a href="#" onclick="navigateToAbout()">About Us</a></li>
+        <li><a href="#" onclick="navigateToService()">Services</a></li>
+        <li><a href="#" onclick="navigateToContact()">Contact Us</a></li>
+      </ul>
     </div>
+  </div>
 
-    <header class="header">
-        <nav class="navbar">
-            <input type="checkbox" id="menu-toggle" aria-label="input" />
-            <label for="menu-toggle" id="hamburger-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                    <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-                </svg>
-            </label>
-            <h2 class="logo"><a href="#" onclick="navigateToHome()">RaJ MaYo</a></h2>
-            <ul class="links">
-                <li><a href="#" onclick="navigateToHome()">Home</a></li>
-                <li><a href="#" onclick="navigateToAbout()">About Us</a></li>
-                <li><a href="#" onclick="navigateToService()">Services</a></li>
-                <li><a href="#" onclick="navigateToContact()">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <nav class="navbar">
+      <input type="checkbox" id="menu-toggle" aria-label="input" />
+      <label for="menu-toggle" id="hamburger-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </label>
+      <h2 class="logo"><a href="#" onclick="navigateToHome()">RaJ MaYo</a></h2>
+      <ul class="links">
+        <li><a href="#" onclick="navigateToHome()">Home</a></li>
+        <li><a href="#" onclick="navigateToAbout()">About Us</a></li>
+        <li><a href="#" onclick="navigateToService()">Services</a></li>
+        <li><a href="#" onclick="navigateToContact()">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Blog Section -->
-    <section class="blog-section">
-        <div class="container">
-            <h2>Latest Blogs</h2>
-            <div class="blog-grid">
-                <div class="blog-card">
-                    <img src="https://i.pinimg.com/originals/a7/ae/9c/a7ae9c233bf56616c01cf7b179873241.jpg"
-                        alt="Blog Image 1">
-                    <div class="blog-content">
-                        <h3>Blog Title 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://i.pinimg.com/originals/a7/ae/9c/a7ae9c233bf56616c01cf7b179873241.jpg"
-                        alt="Blog Image 2">
-                    <div class="blog-content">
-                        <h3>Blog Title 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://i.pinimg.com/originals/a7/ae/9c/a7ae9c233bf56616c01cf7b179873241.jpg"
-                        alt="Blog Image 3">
-                    <div class="blog-content">
-                        <h3>Blog Title 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                <div class="blog-card">
-                    <img src="https://i.pinimg.com/originals/a7/ae/9c/a7ae9c233bf56616c01cf7b179873241.jpg"
-                        alt="Blog Image 4">
-                    <div class="blog-content">
-                        <h3>Blog Title 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae eros eget tellus
-                            tristique bibendum.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div>
+  <!-- Blog Section -->
+  <section class="blogs grid-blogs">
+    <h6>Our Blog</h6>
+    <h1>Latest <span style="color: green;">articles</span></h1>
+    <div class="card-container">
+      <div class="card-blog img1" onclick="openModal('modal1')">
+        <div class="card-header">
+          <span class="card-date">Aug 20, 2022</span>
         </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 Your Website. All rights reserved.</p>
-            </div>
+        <h2>How Emirates Airlines Uses Social Media Marketing To Stay Ahead Of The Curve</h2>
+        <div class="card-content">
+          <p>Airlines are known for their strong social media presence. They put a lot of effort into developing...
+          </p>
         </div>
-    </footer>
+      </div>
+      <div class="card-blog img2" onclick="openModal('modal2')">
+        <div class="card-header">
+          <span class="card-date">June 25, 2024</span>
+        </div>
+        <h2>Best tips to promote an Airline Business on the Internet</h2>
+        <div class="card-content">
+          <p>Search Engine Optimization (SEO) is a process that aims to improve the visibility of your website in ...
+          </p>
+        </div>
+      </div>
+      <div class="card-blog img3" onclick="openModal('modal3')">
+        <div class="card-header">
+          <span class="card-date">Sept 5, 2022</span>
+        </div>
+        <h2>How airlines can promote themselves through E-mail Marketing</h2>
+        <div class="card-content">
+          <p>The rise of air travel is a lucrative industry for marketers, as it allows them to reach out to ...</p>
+        </div>
+      </div>
+      <div class="card-blog img4" onclick="openModal('modal4')">
+        <div class="card-header">
+          <span class="card-date">Sept 7, 2022</span>
+        </div>
+        <h2>How Boeing is Using Digital Marketing as its Marketing Strategy</h2>
+        <div class="card-content">
+          <p>Boeing is a global aerospace company that is known for its success in both inbound and outbound...
+          </p>
+        </div>
+      </div>
+      <div class="card-blog img5" onclick="openModal('modal5')">
+        <div class="card-header">
+          <span class="card-date">Sept 12, 2022</span>
+        </div>
+        <h2>Turkish Airlines | A digital Marketing Case Study in Aviation Industry</h2>
+        <div class="card-content">
+          <p>Digital marketing is a vital part of any company's operations, and Turkish Airlines takes the time to...
+          </p>
+        </div>
+      </div>
+      <div class="card-blog img6" onclick="openModal('modal6')">
+        <div class="card-header">
+          <span class="card-date">Sept 13, 2022</span>
+        </div>
+        <h2>How Airlines Can Promote Themselves Through Webpage Marketing</h2>
+        <div class="card-content">
+          <p>Digital marketing is a type of promotional activity that uses electronic devices to convey a message to
+            a...</p>
+        </div>
+      </div>
+      <div class="card-blog img7" onclick="openModal('modal7')">
+        <div class="card-header">
+          <span class="card-date">Sept 17, 2022</span>
+        </div>
+        <h2>How Airbus can Improve its Digital Marketing Strategies</h2>
+        <div class="card-content">
+          <p>As a multinational company, Airbus is known for its work in the aerospace, civil aircraft, and defense...
+          </p>
+        </div>
+      </div>
+      <div class="card-blog img8" onclick="openModal('modal8')">
+        <div class="card-header">
+          <span class="card-date">Sept 12, 2022</span>
+        </div>
+        <h2>How Airlines can promote themselves through Google Ads</h2>
+        <div class="card-content">
+          <p>Google is a search engine that people use to find what they need and where they go. When they're ...
+          </p>
+        </div>
+      </div>
+      <div class="card-blog img9" onclick="openModal('modal9')">
+        <div class="card-header">
+          <span class="card-date">Sept 27, 2022</span>
+        </div>
+        <h2>How Aircraft Suppliers can use LinkedIn to promote thier Business</h2>
+        <div class="card-content">
+          <p>The professional networking site LinkedIn is used by over 200 million people in the US and is available on
+            var...</p>
+        </div>
+      </div>
+  </section>
 
 
-    <script>
-        function navigateToHome() {
-            window.location.href = '../index.html';
-        }
+  <!-- Modal -->
+  <div class="modal" id="modal1">
+    <div class="modal-content ">
+      <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQHPjat1xNYN-Q/article-cover_image-shrink_600_2000/0/1660935103271?e=1726704000&v=beta&t=-egwc0C9zX1xrgqm4-lX1FuhAjUbNnR7EDk35zLBCxU"
+        alt="img1">
+      <div class="card-header">
+        <span class="card-date">Aug 20, 2022</span>
+      </div>
+      <h2>How Emirates Airlines Uses Social Media Marketing To Stay Ahead Of The Curve</h2>
+      <div class="card-content">
+        <p>Airlines are known for their strong social media presence. They put a lot of effort into developing effective
+          campaigns and managing their online presence. </p>
+        <p>The results of the Travel Social Media Benchmark show that airlines have performed well in terms of their
+          social media presence. They are also benefiting from the increasing interest in the industry, as well as from
+          the rise of dedicated social media teams within the airlines. </p>
 
-        function navigateToAbout() {
-            window.location.href = '../About/about.html';
-        }
-       
+        <p>According to the latest results of the Travel Social Media Benchmark, Emirates is one of the fastest growing
+          airlines in the world. They are able to serve thousands of passengers each day through their social media
+          presence. </p>
+        <p>International airlines are known for their ability to reach out to their potential customers and connect with
+          them from all around the world through social media. However, one of the most important factors that an
+          airline should consider when it comes to developing its social media strategy is being able to manage its
+          streams 24 hours a day, seven days a week. </p>
 
-        function navigateToService() {
-            window.location.href = '../Service/sindex.html';
-        }
+        <p>Through its partnership with a global brand, Emirates was able to create a variety of compelling and
+          beautiful stories that were broadcast to travelers all around the world. The airline's followers were also
+          able to share the content and create a network of brand ambassadors. </p>
+        <p>In response to the increasing number of requests for in-flight meals, Emirates has introduced a new program
+          that allows its flight attendants to order their meals using their smartphones. </p>
 
-        function navigateToContact() {
-            window.location.href = '../Pages/contactus.html';
-        }
-    </script>
-    <script src="bscript.js"></script>
+        <p>The wide range of options that Emirates offers for its passengers makes it an ideal choice when it comes to
+          in-flight dining. In addition to a variety of food options, the airline also has a wide selection of
+          award-winning wines. </p>
+        <p>The new program allows the flight attendants to communicate with one another using their smartphones.
+          However, they are not allowed to run applications that are not related to the meal ordering app. </p>
+
+        <p>The new program allows flight attendants to order their meals using their smartphones. They are able to
+          instantly view their orders and prepare them in the galley. According to Terry Daly, a senior vice president
+          of service delivery at Emirates, the new system makes the process faster and more personal. </p>
+        <p>The use of technology has made it easier for flight attendants to keep the premium passengers' food and drink
+          well-hydrated. It also ensures that the food they order is exactly what they ordered. </p>
+
+        <p>Emirates is known for its world-class service and the ability to inspire travelers all around the world.
+          Through its extensive network, the airline is able to provide its passengers with a variety of international
+          destinations. </p>
+        <p>The company's participation in industry events such as the International Conventions and Expos provides it
+          with an opportunity to introduce its various products and services to its key audiences. One of the airline's
+          most prominent social media initiatives is its promotion of its First Class service. During a flight from
+          Dubai to New York, Emirates upgraded a YouTube celebrity to First Class. </p>
+
+        <p>Recently, a YouTube user was able to upgrade his flight with Emirates. He was so impressed by the new cabin
+          that he decided to take a break from his busy schedule and record his experience. His video has gained over 38
+          million views. </p>
+        <p>One of the most important factors that businesses should consider when it comes to marketing their products
+          and services is the ability to show their brand's unique characteristics. </p>
+
+        <h4>Lesson to Learn</h4>
+        <p>Digital transformation is a process that involves shifting from being traditional to being digital. This can
+          be done through the use of various tools and techniques such as social media and advertising. Having the right
+          digital assets and strategies can help organizations acquire new customers and retain their existing ones.</p>
+        <p>Emirates' digital marketing team knew this, as they use various social media platforms to capture the
+          attention of their potential customers. They also keep a lot of eye candies, as well as videos of their planes
+          and other travel content.</p>
+        <p>The team at Emirates Marketing & PR deserves all the respect they are getting. Through this case study, they
+          will be able to learn more about how to use digital marketing to their advantage.</p>
+        <p>Digital transformation is a process that involves shifting from being traditional to being digital. This can
+          be done through the use of various tools and techniques such as social media and advertising. Having the right
+          digital assets and strategies can help organizations acquire new customers and retain their existing ones.</p>
+        <p>Emirates' digital marketing team knew this, as they use various social media platforms to capture the
+          attention of their potential customers. They also keep a lot of eye candies, as well as videos of their planes
+          and other travel content.</p>
+        <p>The team at Emirates Marketing & PR deserves all the respect they are getting. Through this case study, they
+          will be able to learn more about how to use digital marketing to their advantage. </p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQHfIVl_AYFTbg/article-cover_image-shrink_600_2000/0/1661180939976?e=1726704000&v=beta&t=7ZlQXc52LasvNLnaO4HQjL-Hxb-l-ZwuzKJjsc8ndHk"
+        alt="img2">
+      <div class="card-header">
+        <span class="card-date">Aug 20, 2022</span>
+      </div>
+      <h2>How Emirates Airlines Uses Social Media Marketing To Stay Ahead Of The Curve</h2>
+      <div class="card-content">
+        <h4>SEO</h4>
+        <p>Search Engine Optimization (SEO) is a process that aims to improve the visibility of your website in search
+          results. It involves developing and implementing strategies that will help improve the relevance of your
+          website to a specific search term. Having a strong online presence is very important for any travel business,
+          as it can help them compete in the market. The value of search engine optimization goes beyond just being
+          found on Google. It’s also about the ability to connect with potential customers and provide them with the
+          necessary information to make informed decisions when it comes to traveling. Most of the time, a travel
+          customer will only be able to convert once they have made a decision to book a trip, and they will most likely
+          be doing so through reviews and discussions. The challenge for travel businesses is how to improve the
+          visibility of their website in search results, especially when it comes to the word holiday. Having a strong
+          online presence is very important for any travel business, as it can help them compete in the market.</p>
+        <h4>PPC</h4>
+        <p>One of the most important factors that you should consider when it comes to implementing a successful online
+          advertising strategy for your airline business is the appropriate use of pay-per-click (PPC). There are
+          several steps that you can take to improve the efficiency of your online marketing efforts. One of the most
+          important factors that you should consider when it comes to developing an effective online marketing strategy
+          is keyword research. This process is very important to ensure that you are getting the most out of your
+          marketing efforts. One of the most effective ways to improve the efficiency of your online marketing efforts
+          is by organizing and group your keywords. This will allow you to focus on the important factors that will help
+          improve the effectiveness of your campaigns. One of the most important factors that you should consider when
+          it comes to developing an effective online marketing strategy is regularly testing and improving your efforts.
+        </p>
+        <h4>Content Marketing</h4>
+        <p>Today, major airlines use various forms of media to inform, entertain, and build connections with their
+          passengers. They are able to generate a steady stream of revenue through the use of original content and have
+          developed platforms that allow their customers to share their content. These platforms are also designed to
+          make their content more free and valuable. During the past few years, the concept of rich airline content was
+          restricted to the cabin, which was perceived as a way for advertisers to benefit from what was considered to
+          be a captive audience. However, according to experts, this concept has been misunderstood. They believe that
+          the dynamics of the passengers' minds are changed when they are entertained. It is clear that the traditional
+          model of airline content has changed. Instead of focusing on the plane, airlines are now experimenting with
+          different forms of media and content to engage their customers. They are able to generate a steady stream of
+          revenue through the use of original content and have developed platforms that allow their customers to share
+          their content.</p>
+        <h4>Social Media Marketing</h4>
+        <p>Social media is a platform that allows users to exchange and develop their own content. It is also referred
+          to as a "user generated content" space due to the continuous changes that occur in the applications and
+          content that are created by its users. Web 2.0 is a technological and ideological base that has been used to
+          develop social media. Social media is a wide-range of digital tools and activities that allow people to
+          communicate and share their thoughts and ideas online. It is also used by various segments of society, such as
+          business, politics, and the emergency services. It has been recognized that it can stimulate discussions about
+          certain social issues. The rapid emergence and evolution of social media has allowed the airline industry to
+          expand its scope of operations and develop new strategies to enhance its customer experience. In addition to
+          being used for product marketing, social media is also being used to enhance the performance of the
+          organization by allowing it to respond to and update the feedback of its passengers.</p>
+        <h4>Email Marketing</h4>
+        <p>According to Brafton, email marketing is a powerful tool that can help brands build strong relationships with
+          their potential customers. It can be used to remind them about upcoming deals and provide timely information.
+          Despite the decline of email marketing, it is still a vital strategy for businesses as it can still produce
+          effective and accurate content. One of the most important factors that you should consider when it comes to
+          implementing a successful online marketing strategy for your airline business is the understanding of the
+          factors that influence the traffic that your website receives. American Airlines has a powerful ecommerce hub
+          that is used to promote its products and services.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal3">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQHPjat1xNYN-Q/article-cover_image-shrink_600_2000/0/1660935103271?e=1726704000&v=beta&t=-egwc0C9zX1xrgqm4-lX1FuhAjUbNnR7EDk35zLBCxU"
+        alt="img3">
+      <div class="card-header">
+        <span class="card-date">Aug 20, 2022</span>
+      </div>
+      <h2>How Emirates Airlines Uses Social Media Marketing To Stay Ahead Of The Curve</h2>
+      <div class="card-content">
+        <p> The rise of air travel is a lucrative industry for marketers, as it allows them to reach out to more
+          potential customers. According to estimates, the number of people who fly on US airlines is expected to
+          increase to over a billion in 2034. According to the International Air Transport Association (IATA), the
+          passenger numbers are expected to increase to around 7 billion in 2034. This is a significant achievement for
+          the industry as it shows how quickly it is extending its expansion. However, what is the use of email
+          marketing to boost the revenue?</p>
+
+        <h4>E-mail Marketing and the Aviation Industry</h4>
+        <p>One of the most effective ways for aviation companies to reach out to their target audience is through email
+          marketing. This type of marketing allows them to reach out to their potential customers in a way that no other
+          advertising medium can.
+        </p>
+
+        <h4>Target Market</h4>
+        <p>Due to the existence of a large number of customers, the aviation industry is very important for companies to
+          reach out to their potential customers through email marketing. Being able to reach out to them through this
+          medium helps boost the brand's value and position it as the most reliable.</p>
+
+        <h4>Sales Funnels</h4>
+        <p>The aviation industry can benefit from email marketing as it allows them to fill their sales funnel with more
+          potential customers. It provides a compelling and effective point of communication with their potential
+          customers.</p>
+
+        <h4>Creating Content</h4>
+        <p>One of the most important factors that a marketer must consider when it comes to implementing email marketing
+          is learning how to use it at the next touchpoint. In this article, we'll talk about some of the most common
+          email marketing tactics that can be used by aviation companies. The aviation industry has never been easier to
+          create and distribute well-written content. With the right tools and resources, it can be done in just a
+          couple of minutes. One of the most important factors that aviation companies can consider when it comes to
+          creating and distributing content is the timing of the message. With the help of email marketing, they can
+          easily target their audience at the right time.</p>
+
+        <h4>Proven Aviation Email Marketing Strategies for Better Reach understanding your Target Market</h4>
+        <p>Before you start implementing email marketing, it's important that you identify the exact reason why your
+          potential customers are interested in buying a flight or traveling to a certain destination. This will allow
+          you to create a compelling and effective message. Before you start, it's important that you thoroughly
+          understand what your customers are looking for in a flight. According to Airbnb, almost half of its customers
+          are "explorers." These individuals are looking for local experiences and are more likely to book
+          accommodations based on their preferences. Through email marketing, Airbnb has been able to reach out to its
+          potential customers in a way that's both timely and effective.</p>
+
+        <h4>Building Personal Relationship or Targeted Strategies</h4>
+        <p>One of the most important factors that aviation companies can consider when it comes to creating and
+          distributing content is the positioning of their brand. This strategy can help them build a strong
+          relationship with their potential customers. Unfortunately, most of the time, the marketing teams of aviation
+          companies focus on statistics and not on the importance of storytelling. Despite the wide variety of stories
+          that aviation companies have to offer, they rarely share them. For instance, the stories of the engineers who
+          designed the aircraft, the flight attendants who have been with the company for a long time, and the pilots
+          who have magic in their veins are rarely told. Some of the leading brands in the industry use email marketing
+          to share these stories. Southwest's early pioneers believed that storytelling was very important to associate
+          with their clients. In the past couple of months, the company has been focused on sharing the 175 stories of
+          its customers. The campaign started with a simple yet effective website that showcases the brand's various
+          offerings. According to Ryan Green, the company's vice president of marketing, Southwest Airlines is proud to
+          share the stories of its customers. He said that the company is honored to tell these stories, as over 115
+          million people travel with the company every year. One of the most effective ways that aviation companies can
+          use to reach out to their potential customers is through email marketing. For instance, the story of a young
+          girl named Jane, who frequently flew to the Children's Hospice, can be told through an email.</p>
+
+        <h4>Customer Journey</h4>
+        <p>Understanding the various facets of the customer journey is very important for aviation companies as it
+          allows them to provide their customers with the best possible experience. Without their support, the industry
+          would not be able to function properly. Aviation companies need to learn how to develop effective marketing
+          strategies that can help them meet the needs of their customers. One of the most important factors that
+          aviation companies can consider when it comes to developing effective marketing strategies is the availability
+          of a personalized service. For instance, Emirates has a dedicated inflight service that allows the crew to
+          review the previous trips of their customers and learn about their current issues. Aviation companies are
+          expected to provide their customers with the best possible experience, and developing effective marketing
+          strategies that can help them do so is very important.</p>
+
+        <h4>Personal Relevance with the Customer</h4>
+        <p>One of the most important factors that aviation companies can consider when it comes to developing effective
+          marketing strategies is the availability of a personalized service. This can be done through the use of email
+          marketing techniques that are geared toward addressing the specific needs of their customers. For instance,
+          American Airlines used an email marketing strategy known as Abandoned Cart in 2013 to deliver relevant content
+          to its customers. This method worked well because it was able to personalize the message for each individual.
+          The abandoned cart on the American Airlines' website was used to inform the company's customers about an
+          unpurchased trip that had been left for more than 24 hours. The email was then sent to the relevant audience
+          members, offering the lowest flight charges. Through the use of this strategy, American Airlines was able to
+          increase its open rate by 300% and its click-through rate by 400%. It also performed well in terms of
+          conversion rates.</p>
+
+        <h4>End Note</h4>
+        <p>Aviation companies can also build a stronger relationship with their potential customers by adopting a
+          personalized approach to marketing. This method can help them build trust with their potential clients and
+          provide them with the best possible service.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal4">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQFnUORUVZuprA/article-cover_image-shrink_600_2000/0/1662570372199?e=1726704000&v=beta&t=tGDWVp2Fre6k_t0HfVDEDxnIBoWF1VUgOjP8CYskxe8"
+        alt="img4">
+      <div class="card-header">
+        <span class="card-date">Sept 7, 2022</span>
+      </div>
+      <h2>How Boeing is Using Digital Marketing as its Marketing Strategy</h2>
+      <div class="card-content">
+        <p>Boeing is a global aerospace company that is known for its success in both inbound and outbound marketing.
+          They are also doing something different with their social media presence. They are engaging with their
+          audience through conversations that are focused on showcasing their achievements. </p>
+
+        <h4>Digital Marketing Strategies Implemented by BOEING</h4>
+        <p>The two constituents of digital marketing are the advertiser and the audience. For Boeing, digital media is
+          used to satisfy their advertisers looking for a more accurate understanding of their business model.
+          Similarly, for their audience, Boeing is using it to know what their content will be used to achieve their
+          goals.</p>
+        <p>Through digital marketing, Boeing is able to attract new customers by identifying their hidden potential.
+          This process helps them customize their communication and improve their customer relationship. By using this
+          tool, they are able to build a deeper understanding of their customers.</p>
+        <p>As a result of digital marketing, Boeing is becoming more trusted by its audience and advertisers. Through
+          articles published in digital media, the company is able to raise awareness about various global issues. This
+          helps them show that it is not only focused on its products but also concerned about the problems faced by the
+          entire population.</p>
+        <p>Boeing has a very active Google + page, which has been continuously updated with new content. This helps the
+          company increase its product sales. The company is also working toward becoming more profitable by
+          implementing digital marketing in its various operations.</p>
+        <p>Facebook is the company's biggest digital marketing platform with over 300,000 followers. Through its 737
+          updates, Boeing is able to keep in touch with its customers. Its advertising efforts help close the gap
+          between the company's current image and its true scope as an aerospace company.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal5">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal5')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQEZvjidKg5emA/article-cover_image-shrink_600_2000/0/1662989734093?e=1726704000&v=beta&t=uaLq3AlQNoIIIp1IgiSW4La9hpk5Xfl0g_jCF4sQDwo"
+        alt="img5">
+      <div class="card-header">
+        <span class="card-date">Sept 12, 2022</span>
+      </div>
+      <h2>Turkish Airlines | digital Marketing Case Study in Aviation Industry</h2>
+      <div class="card-content">
+        <p>Digital marketing is a vital part of any company's operations, and Turkish Airlines takes the time to
+          understand which channels and platforms deliver the most impact. With an extensive fleet and a variety of
+          services, including one-stop connections, Turkish Airlines is able to provide its passengers with the best
+          possible experience. Its employees are dedicated to making their customers feel special. </p>
+
+        <h4>Turkish Airlines | A digital Marketing Case Study in Aviation Industry</h4>
+        <p>Being able to provide the best possible service is what sets Turkish Airlines apart from its competitors.
+          Through digital marketing, the company is able to increase its brand awareness and attract more potential
+          customers. To achieve this, the company created a campaign that would appeal to its target audience.</p>
+        <p>To increase its brand awareness, Turkish Airlines launched a global campaign. The company wanted to reach a
+          new audience by developing a new target group: adventurous people with a passion for travel. To test the
+          effectiveness of the campaign, Turkish Airlines measured the recall of its ads.</p>
+
+        <h4>Viral Post and Strategy Behind</h4>
+        <p>The company's ad, which was entitled "Kobe vs. Lionel: The Selfie Shootout," went viral and became the
+          fastest-growing commercial on YouTube. It attracted over 77 million views and increased the company's brand
+          awareness in various regions.</p>
+        <p>The firm created a campaign around the word "selfie," which was one of the most searched terms in 2013. It
+          was partnered with Google to create a custom channel that would introduce the campaign and show the company's
+          spirit. The goal of the campaign was to reach a wider audience through YouTube's advertising tools.</p>
+        <p>The goal of the campaign was to create a contest between Bryant and Messi, where they tried to take the most
+          impressive photos. In one of the photos, the former posed in front of a cathedral in Moscow and with a monkey
+          in Thailand. The campaign was different from its predecessor, as it moved beyond the plane's cabin. It showed
+          the world through the places that Turkish Airlines flies.</p>
+        <p>The commercial was able to increase the company's awareness and provide a glimpse into the world of Turkish
+          Airlines. It also highlighted the company's global goals. Through this campaign, the company was able to
+          promote its website.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal6">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal6')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQEV26yxrEFBAA/article-cover_image-shrink_720_1280/0/1663076429244?e=1726704000&v=beta&t=2jEhHrmyWgqXYfv0hHzgwUnVp6PAKx6BG_dQOor1Aps"
+        alt="img6">
+      <div class="card-header">
+        <span class="card-date">Sept 13, 2022</span>
+      </div>
+      <h2>How Airlines Can Promote Themselves Through Webpage Marketing</h2>
+      <div class="card-content">
+        <p>Digital marketing is a type of promotional activity that uses electronic devices to convey a message to a
+          target audience. One of the most common types of this type of marketing is webpage marketing. This type of
+          marketing is designed to drive traffic to a website. </p>
+
+        <h4>Airlines and Webpage Marketing</h4>
+        <p>One of the most important factors that Airlines businesses consider when it comes to marketing is the
+          availability of a webpage. Airlines use web pages as their primary method of communication with their
+          customers. They are able to provide a variety of products and services through their home page, as well as
+          various other pages that are designed to help business owners connect with their customers.</p>
+        <p>One of the most important factors that Airlines businesses consider when it comes to marketing is the
+          availability of a website. For example having a Facebook page allows its more than two billion users to
+          discover its business. Airlines can use various strategies to encourage their followers to like their page.
+          They can also interact with their posts and share their content.</p>
+        <p>The initial audience that an Airlines company can establish through a Webpage is very important as it allows
+          it to establish its credibility and spread the word about its business. People who like its page will receive
+          notifications when it updates, which helps them stay up-to-date with the latest news about the company.
+          Getting more likes on its page can also help it keep its customers updated about its promotions and new
+          products.</p>
+        <p>They are also engaging with their customers by taking reservations, driving people to their website, or
+          providing a link to their page so that others can download it. </p>
+        <p>Having the ideal web page is also important to ensure that it captures the company's brand voice and
+          intention. It should be high on every page of Google, as well as other prominent search engines. There are a
+          variety of steps that airlines can take to improve their visibility on various landing pages and blog posts.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal7">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal7')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQHa8qCnQtdx3g/article-cover_image-shrink_720_1280/0/1663416379529?e=1726704000&v=beta&t=_2aBWlwX-A0-PEoSxs2ClMVfyYIrNIWVqqZWqx3GINU"
+        alt="img7">
+      <div class="card-header">
+        <span class="card-date">Sept 17, 2022</span>
+      </div>
+      <h2>How Airbus can Improve its Digital Marketing Strategies</h2>
+      <div class="card-content">
+        <p>As a multinational company, Airbus is known for its work in the aerospace, civil aircraft, and defense
+          industries. Therefore, it is important that the company's website is regularly updated and optimized to
+          attract the attention of search engines. </p>
+
+        <h4>How Airbus can Improve its Digital Marketing Strategies</h4>
+        <p>Despite the increasing number of companies that are already engaging with their customers in the digital
+          realm, many in the aviation industry are still not ready to fully embrace the concept of digital marketing.
+          This is why it is important that Airbus and other aviation companies start to upgrade their digital marketing
+          efforts to ensure that they are able to reach their target audiences in both the virtual and real world.</p>
+        <p>In addition to regular website updates, it is also important that the company's digital marketing efforts are
+          focused on improving its search rankings. This can be done through the use of strategic keywords and the
+          development of relevant content. Although digital marketing is mainly about getting people to visit your
+          website, it is not the end of the process.</p>
+        <p>The goal of a website is to convert visitors into customers. This is done through the development of landing
+          pages that are designed to highlight the company's product and provide a solution to a specific problem. A
+          call to action button should also be included in these pages to encourage users to take action.</p>
+        <p>Social media is an integral part of the digital market, and almost everyone uses it. This is why it is
+          important that Airbus and other companies use it to their advantage.</p>
+        <p>One of the most amazing features of social media is that it is used by people of all ages. It allows
+          businesses to interact with their audience members from different backgrounds. To connect with your target
+          customers, you only need to be active on various social media platforms such as Instagram, YouTube, Facebook,
+          and Twitter.</p>
+        <p>Airbus must also take advantage of the various digital marketing tools that are available to them to improve
+          its global marketing efforts.</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal8">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal8')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQEE-T4XHQpweA/article-cover_image-shrink_600_2000/0/1663950170676?e=1726704000&v=beta&t=91Lh6hc8brpIdqyk-3-589OQP8-k2PouWJLLR1g1MYM"
+        alt="img8">
+      <div class="card-header">
+        <span class="card-date">Sept 23, 2022</span>
+      </div>
+      <h2>How Airlines can promote themselves through Google Ads</h2>
+      <div class="card-content">
+        <p>Digital marketing is a vital part of any company's operations, and Turkish Airlines takes the time to
+          understand which channels and platforms deliver the most impact. With an extensive fleet and a variety of
+          services, including one-stop connections, Turkish Airlines is able to provide its passengers with the best
+          possible experience. Its employees are dedicated to making their customers feel special. </p>
+
+        <h4>How Airlines can promote themselves through Google Ads</h4>
+        <p>Google Ads is a part of the airline company's online advertising program, which allows advertisers to reach
+          their audience by creating online ads. It's a pay-per-click system that allows advertisers to reach their
+          target audience by displaying ads on Google when people are looking for certain products or services.</p>
+        <p>A well-placed ad can help an airline connect with its potential customers on the right device at the right
+          time. Google Ads can also help an airline get the name of its brand out in front of its potential customers.
+          One of the most important factors that an airline can consider when it comes to using Google Ads is conversion
+          tracking, which allows them to monitor their campaign's performance.</p>
+
+        <p>Aside from tracking basic conversions, Google Ads also allows airlines to create custom conversions. With the
+          ability to target ads to specific audiences, an airline can reach out to those who are interested in specific
+          products or services.</p>
+        <p>With Google Ads, an airline can monitor the success of its campaign, as well as the actions of its potential
+          customers. For instance, if a person clicks an ad, then they can track the various activities of their
+          company, such as searching for a flight or making an order.</p>
+        <p>The ability to target ads to specific audiences can help an airline connect with its potential customers at
+          the right time. Google Ads can also help an airline boost its sales by allowing it to provide a direct booking
+          option.</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="modal9">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeModal('modal9')">&times;</span>
+      <img
+        src="https://media.licdn.com/dms/image/D4D12AQG_gVDTk0-QiA/article-cover_image-shrink_600_2000/0/1664287191171?e=1726704000&v=beta&t=Pc5k4roToyzASeX0FBvXb8qA2Y8PlXQug-G8e2shocs"
+        alt="img9">
+      <div class="card-header">
+        <span class="card-date">Sept 27, 2022</span>
+      </div>
+      <h2>How Aircraft Suppliers can use LinkedIn to promote thier Business</h2>
+      <div class="card-content">
+        <p>The professional networking site LinkedIn is used by over 200 million people in the US and is available on
+          various platforms including mobile apps and websites. It was founded on May 5, 2003. You can access it from a
+          variety of devices, such as a desktop, mobile app, or web experience.</p>
+
+        <h4>How Aircraft Suppliers can use LinkedIn to promote thier Business</h4>
+        <p>A professional profile on LinkedIn can help you connect with potential clients and aircraft part suppliers
+          can showcase their expertise. It has over 722 million members globally. According to Business Insider data,
+          users are more likely to trust advertisements that are on platforms they use. Aircraft part suppliers can
+          connect with decision makers of the Airlines to generate potential leads.</p>
+        <p>It’s important that aircraft suppliers have a comprehensive marketing strategy to capitalize on the
+          platform's reputation. With the increasing number of users and the trustworthiness of its platform, it’s
+          important that they take advantage of it to establish a presence. However, this strategy should be done in a
+          different way.</p>
+        <p>The goal of LinkedIn is to provide its users with the best possible experience. This is done through its
+          algorithm, which prioritizes engagement and relevancy. Having a well-defined target audience is very important
+          for any business. With the help of marketing solutions, aircraft suppliers can easily speak directly to their
+          audience.</p>
+        <p>For aircraft suppliers, one of the most effective ways to establish a presence on LinkedIn is by focusing on
+          professionals in a certain area or specialization. They can also use search engine optimization to improve
+          their visibility and attract more potential customers. </p>
+        <p>According to LinkedIn, it takes around ten pieces of content to make a buying decision. To help aircraft
+          suppliers and members build their presence on the platform, it has created Listing Pages. These allow them to
+          easily connect with their potential customers.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bscript.js"></script>
 </body>
 
 </html>

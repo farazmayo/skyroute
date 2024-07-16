@@ -278,3 +278,27 @@
           }
       });
   });
+
+
+
+  //Blogs Show More 
+  document.querySelectorAll('.show-more').forEach(element => {
+    element.addEventListener('mouseover', () => {
+      const arrow = element.querySelector('.arrow');
+      const text = element.querySelector('.text');
+      
+      // Move the arrow to the right and reveal the text
+      arrow.style.left = '100%';
+      text.style.opacity = '1';
+    });
+
+    element.addEventListener('mouseout', () => {
+      const arrow = element.querySelector('.arrow');
+      const text = element.querySelector('.text');
+      
+      // Move the arrow back to its original position and hide the text
+      arrow.style.left = '0';
+      text.style.opacity = '0';
+    });
+  });
+

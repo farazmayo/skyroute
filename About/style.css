@@ -137,7 +137,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: start;
 }
 
 .aboutus-section .container {
@@ -152,11 +152,17 @@ body {
   color: #333D79FF;
 }
 
+.aboutus-section h4{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
 .aboutus-section p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 /* Footer Section Styles */
